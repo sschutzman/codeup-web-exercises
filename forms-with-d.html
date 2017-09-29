@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With US</title>
+    <style>
+	    input {display:block;margin:10px;padding:20px;}
+	    input[type="radio"] {float:left;}
+	    textarea {display:block;margin:10px;padding:20px;}
+	    label {display:block;margin-top:40px;}
+	    select {display:block;margin:10px;padding:20px;}
+	    button {display:block;margin:10px;padding:20px;}
+	    p {height:20px;line-height:31px;}
+    </style>
+</head>
+<body>
+    <form method="GET" action="https://requestb.in/1n2b8m41">
+
+    <label for="email">Email</label>
+    <input id="email" name="Email" type="Email" placeholder="Enter Email Here">
+
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" placeholder="Enter Password Here">
+
+    <label for="Bio">Bio</label>
+    <textarea id="Bio" name="Bio">Enter short description about yourself please.</textarea>
+
+        <p>How Did You Hear About Us?</p>
+        <input type="radio" name="Billboard" value="Billboard"><p>Billboard</p>
+        <input type="radio" name="Radio Advertisement" value="Radio Advertisement"><p>Radio</p>
+       	<input type="radio" name="Internet Advertisement" value="Internet Advertisement"> <p>Internet</p>
+        <input type="radio" name="Other" value="Other"> <p>Other</p>
+        <p>What Browser Are You Using?</p>
+    <select name="internet browser">
+        <option>Firefox</option>
+        <option>Chrome</option>
+        <option>Safari</option>
+        <option>Opera</option>
+    </select>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
