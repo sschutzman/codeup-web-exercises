@@ -2,36 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register With US</title>
+    <title>Veridian Dynamics: Register With US</title>
 </head>
 <body>
-    <form method="GET" action="https://requestb.in/1n2b8m41">
 
-    <label for="email">Email</label>
-    <input id="email" name="Email" type="Email" placeholder="Enter Email Here">
-    <br>
+    <main>
+        <h1>Register with us!</h1>
 
-    <label for="password">Password</label>
-    <input id="password" name="password" type="password" placeholder="Enter Password Here">
-    <br>
+            <form method="POST" action="https://requestb.in/1n2b8m41">
 
-    <textarea id="Bio" name="Bio">Enter short description about yourself please.</textarea>
+           <div>
+            <label for="email">Email</label>
+            <input id="email" name="Email" type="Email" placeholder="Enter Email Here">
+           </div> 
 
-    <br>
-        How Did You Hear About Us? <br>
-         <input type="radio" name="Billboard" value="Billboard">Billboard<br>
-         <input type="radio" name="Radio Advertisement" value="Radio Advertisement">Radio<br>
-         <input type="radio" name="Internet Advertisement" value="Internet Advertisement">Internet<br>
-         <input type="radio" name="Other" value="Other">Other<br>
+            <div>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Enter Password Here">
+            </div>
 
-        What Browser Are You Using?<br>
-    <select name="internet browser">
-        <option>Firefox</option>
-        <option>Chrome</option>
-        <option>Safari</option>
-        <option>Opera</option>
-    </select> <br>
-    <button type="submit">Submit</button>
-</form>
+            </div>
+            <div>
+
+             <label for="Bio">Bio</label>
+              <br>
+
+                <textarea id="Bio" name="Bio">Enter short description about yourself please.</textarea>
+            </div>
+
+             <div>
+                How Did You Hear About Us?<br>
+                 <input type="radio" name="about1" value="Billboard">Billboard<br>
+                 <input type="radio" name="about2" value="Radio Advertisement">Radio<br>
+                 <input type="radio" name="about3" value="Internet Advertisement">Internet<br>
+                 <input type="radio" name="about4" value="Other">Other<br>
+             </div>
+
+             <div>
+            <label for="browser">What browser are you using?</label>
+                 <br>
+            <select name="internet browser">
+                <option value="Firefox">Firefox</option>
+                <option value="Chrome">Chrome</option>
+                <option value="Safari">Safari</option>
+                <option value="Opera">Opera</option>
+            </select>
+             </div>
+            <button type="submit">Submit</button>
+
+
+            </form>
+    </main>
 </body>
 </html>
