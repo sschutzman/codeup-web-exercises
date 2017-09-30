@@ -8,8 +8,7 @@ h2{
 }
 body {
     font-family: "Tahoma", serif;
-;
-    background-image: linear-gradient(cadetblue, gainsboro);
+    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/doodles.png");
 }
 
 header {
