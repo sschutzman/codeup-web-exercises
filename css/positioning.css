@@ -1,0 +1,40 @@
+.box{
+    border: 1px solid black;
+    font-weight: bold;
+    color: #ffffff;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    margin: 50px 50px 10px 10px;
+    float:left;
+    position: relative;
+
+}
+img {
+    position: absolute;
+    margin-left: 24px;
+    top: -40px;
+    right: -50px;
+ }
+
+.red {
+    background-color: red;
+
+}
+.orange {
+    background-color: orange;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+    clear: left;
+
+}
+.blue {
+    background-color: blue;
+}
+.violet {
+    background-color: blueviolet;
+}
