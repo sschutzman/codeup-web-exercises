@@ -1,0 +1,142 @@
+html,
+body {
+    margin:0;
+    height: 100%;
+    width: 100%;
+    font-family: "Helvetica Neue", serif;
+}
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    max-width:960px;
+    margin:0 auto;
+}
+
+.alert-info {
+    display: none;
+}
+
+.row {
+    width: 100%;
+    margin: 20px 0;
+}
+
+h1 {
+    display: block;
+    width: 100%;
+    height: 38px;
+    padding: 20px;
+    font-size: 250%;
+}
+.nav-links {
+    float: right;
+
+}
+
+.one-half {
+    width: 50%;
+    float: left;
+    padding: 15px;
+}
+li {
+    text-align: center;
+    display: block;
+    float: left;
+    padding: 10px;
+}
+footer {
+    position:absolute;
+    width:100%;
+    height:60px;   /* Height of the footer */
+ }
+/*anything smaller*/
+@media screen and (max-width: 768px) {
+
+    /* Content box model => width = left border, padding left, width, padding right, border-right */
+    /* Border box => width = left border, width, right border */
+    /* Reset styles */
+    html,
+    body {
+        margin: 0;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        font-family: sans-serif;
+        padding: 5px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #container h1 {
+        clear: both;
+        text-align: center;
+
+    }
+
+    #container {
+        clear: both !important;
+    }
+
+    .alert-info {
+        background-color: #add8e6;
+        border: 2px solid #d3d3d3;
+        padding: 1em;
+        text-align: center;
+        display: block;
+    }
+
+    /* direct child selector */
+    .nav-links > li {
+        color: #000;
+        text-decoration: none;
+        width: 100%;
+        padding:15px;
+        text-align: center;
+        margin: 5px;
+    }
+
+    li {
+        padding: 15px;
+    }
+
+    ul.nav-links {
+        padding: 15px;
+
+    }
+    .nav-links li {
+        background-color: #d3d3d3;
+        padding: 1em;
+        text-align: center;
+        /*margin-bottom: .5em;*/
+        list-style: none;
+
+    }
+
+    .one-half {
+        text-align: center;
+        clear: both;
+    }
+
+    .header-img img {
+        width: 100%;
+    }
+
+
+    .row {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    footer {
+        text-align: center;
+        position: absolute;
+    }
+}
