@@ -1,4 +1,7 @@
-"use strict";
+(function () {
+
+
+    "use strict";
 
 // /**
 //  * TODO:
@@ -9,11 +12,18 @@
 //  *  > sayHello("codeup") // returns "Hello, codeup!"
 //  */
 
-function sayHello(name) {
-    return name;
-}
+// function sayHello(name) {
+//     return name;
+// }
+// console.log(sayHello("Hello, codeup!"));
+//
 
-console.log(sayHello("Hello, codeup!"));
+    function sayHello(name) {
+        return "Hello " + name + "!";
+    }
+
+    var name = "codeup";
+    console.log(sayHello(name));
 // /
 //  * TODO:
 //  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -21,7 +31,8 @@ console.log(sayHello("Hello, codeup!"));
 //  *
 //  * console.log 'helloMessage' to check your work
 //  */
-var helloMessage = sayHello("Hello Sukari");
+
+    var helloMessage = sayHello("Hello Sukari");
 console.log(helloMessage);
 
 //
@@ -32,10 +43,13 @@ console.log(helloMessage);
 //  * console.
 //  */
 
-var myName = function sayHello(name) {
-    return name;
+    var myName = function sayHello(name) {
+        return name;
 }
 console.log(myName("Hello, Sukari"));
+
+    var myName = "Sukari"
+
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -59,11 +73,27 @@ var random = Math.floor((Math.random() * 3) + 1);
 //  * number)
 //  */
 
-function isTwo(num) {
-    return (num)
-    var isTwo = "false"
-    isTwo = "true"
-    isTwo = "false"
+// function isTwo(num) {
+//     return (num)
+//     var isTwo = "false"
+//     isTwo = "true"
+//     isTwo = "false"
+// };
+// console.log(isTwo(random));
+
+// function isTwo(numInput) {
+//     if (numInput === 2){
+//         return true;
+//     } else{
+//         return false;
+//     }
+//
+// }
+// console.log(isTwo(2));
+
+
+    function isTwo(num) {
+        return numInput === 2
 };
 console.log(isTwo(random));
 
@@ -92,11 +122,16 @@ console.log(isTwo(random));
 //  * then display the dollar amount they should tip
 //  */
 
-function calculateTip() {
-    var bill = prompt("What was your total bill?");
-    var tip = prompt("Enter in tip amount");
-    var result = bill * tip + " tip total"
-    return result;
-}
+    function calculateTip() {
+        var bill = prompt("What was your total bill?");
+        var tip = prompt("Enter in tip amount");
+        var result = bill * tip + " tip total"
+        return result;
+    }
 
-console.log(calculateTip());
+// alert("the amount to tip is: " calculateTip(tip, bill));
+
+    console.log(calculateTip());
+
+
+}());

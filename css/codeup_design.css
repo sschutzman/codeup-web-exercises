@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Anton');
+
+h1 {
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+}
+
+body {
+    background-color: #e6e6e6;
+}
+
+.jumbotron {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
