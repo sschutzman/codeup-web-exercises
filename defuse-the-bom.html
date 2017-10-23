@@ -17,7 +17,7 @@
 
         // TODO: This function needs to be called once every second
         function updateTimer() {
-            if (detonationTimer === 50000) {
+            if (detonationTimer === 0) {
                 alert('EXTERMINATE!');
                 document.body.innerHTML = 'Aww too late!';
             } else if (detonationTimer > 0) {
@@ -27,12 +27,12 @@
             detonationTimer--;
         }
 
-        setInterval(updateTimer, 500);
+        var intervalID = setInterval(updateTimer, 1000);
 
         // TODO: When this function runs, it needs to
         // cancel the interval/timeout for updateTimer()
         function defuseTheBOM() {
-            clearInterval(detonationTimer);
+            clearInterval(intervalID);
         }
 
         // Don't modify anything below this line!
@@ -43,6 +43,7 @@
         var defuser = document.getElementById('defuser');
         defuser.addEventListener('click', defuseTheBOM);
     })();
+
 </script>
 </body>
 </html>
