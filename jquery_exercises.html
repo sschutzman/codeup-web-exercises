@@ -36,13 +36,21 @@
 //        $('h1').css("background", "salmon");
 //        $("h1,li,p").css("background", "lightskyblue");
     });
-    $('p').click(function () {
-        $('p').css("font-size", "18px")
+//  Make all paragraphs have a font size of 18px when they are double clicked.
+    $('p').dblclick(function () {
+        this.style.fontSize = "18px";
+//        or
+//        $(this).css("font-size", "18px");
     });
-    $('li').click(function () {
-        $('li').css("color", "red")
+//  Set all li text color to red when the mouse is hovering, reset to black when it is not.
 
-    });
+    $('li').hover(function () {
+        $(this).css("color", "red");
+
+    }, function () {
+        $(this).css("color", 'black');
+        }
+    );
 
 </script>
 
