@@ -57,11 +57,14 @@
         }
     };
 
-    var restaurant = {
+    var restaurant = [
+        {
         name: "Chama Gaucha",
         address: "18318 Sonterra Pl, San Antonio, TX 78258",
         info: "The best food ever!"
-    };
+    },{
+        name:""
+    }];
 
     function initMap(optionsObject) {
         return new google.maps.Map(document.getElementById("map"), optionsObject);
@@ -93,23 +96,6 @@
 
     //  ============== ADD MARKER AND INFO WINDOW
 
-    function addMarkerAndInfoWindow(position, name, infoText) {
-
-        var marker = new google.maps.Marker({
-            position: position,
-            map: map
-        });
-
-        var infoWindowContent = '<h3>' + name + '</h3>';
-        infoWindowContent += '<p>' + infoText + '</p>';
-
-        var infoWindow = new google.maps.InfoWindow({
-            content: infoWindowContent
-        });
-
-        infoWindow.open(map, marker);
-
-    }
 
 
 

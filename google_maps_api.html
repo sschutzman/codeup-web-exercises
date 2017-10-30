@@ -27,27 +27,73 @@
 
             // This sets the center of the map at our location
             center: {
-                lat:  38.573842,
-                lng: -121.400619
+                lat:  38.576636,
+                lng: -121.493594
             }
         };
+
+        var restaurants = [{
+            name: "The Parlor",
+            address: "2620 Fair Oaks Blvd, Sacramento, CA 95864",
+            info: "Yass, doughnut ice cream sandwiches."
+        }, {
+            name: "Ginger Elizabeths",
+            address: "1801 L St #60, Sacramento, CA 95811",
+            info: "French Macarons that'll make you say yas"
+        },{
+            name: "Oto's Marketplace",
+            address: " 4990 Freeport Blvd, Sacramento, CA 95822",
+            info: "Fresh bentos, and japanese pears fam. From Japan!"
+        }];
+
+
+
 
         // Render the map
         var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-        var parlor = { lat:38.573824, lng: -121.400619 };
+        function getLocation(diningObj) {
 
-// Add the marker to our existing map
-        var marker = new google.maps.Marker({
-            position: parlor,
-            map: map
+            var geocoder = new google.maps.Geocoder();
+
+            geocoder.geocode({address: diningObj.address}, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    var position = results[0].geometry.location;
+                    addMarkerAndInfoWindow(position, diningObj.name, diningObj.info);
+                    return position;
+                } else {
+                    return alert("Geocoding unsuccessful");
+                }
+            });
+        }
+
+        restaurants.forEach(function(restaurants) {
+
+            getLocation(restaurants[0]);
         });
-        var infowindow = new google.maps.InfoWindow({
-            content: "Yasss, doughnut ice cream sandwiches."
-        });
+
+
+
+
+        function addMarkerAndInfoWindow(position, name, infoText) {
+
+            var marker = new google.maps.Marker({
+                position: position,
+                map: map
+            });
+
+            var infoWindowContent = '<h3>' + name + '</h3>';
+            infoWindowContent += '<p>' + infoText + '</p>';
+
+            var infoWindow = new google.maps.InfoWindow({
+                content: infoWindowContent
+            });
+
+            infoWindow.open(map, marker);
+
+        }
 
 // Open the window using our map and marker
-        infowindow.open(map, marker);
 
     })();
 
