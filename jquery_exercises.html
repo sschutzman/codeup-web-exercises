@@ -26,17 +26,24 @@
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
-    $(document).ready(function () {
-//        "use strict";
+        "use strict";
+    $('h1').click(function () {
+        $('h1').css("background-color", "lightskyblue")
 //        var contents = $("#container").html();
 //        alert(contents);
 //        $('.codeup').css('border', "1px solid red");
 //        $('li').css("font-size", "40px");
 //        $('h1').css("background", "salmon");
-        $("h1,li,p").css("background", "lightskyblue");
-
+//        $("h1,li,p").css("background", "lightskyblue");
+    });
+    $('p').click(function () {
+        $('p').css("font-size", "18px")
+    });
+    $('li').click(function () {
+        $('li').css("color", "red")
 
     });
+
 </script>
 
 </body>
