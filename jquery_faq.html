@@ -2,9 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>10 FAQs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <style>
+        .invisible {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-$END$
+<!--At the top of the page, add a div with two elements, an h1 that reads "Would you like to sign up for our newsletter?" and a span that has an 'x' in it. When the 'x' is clicked, hide the entire div element.-->
+<div>
+    <div class="alert alert-info alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1>Would you like to sign up for our news letter?<span><a href=""> x</a></span></h1>
+    </div>
+<h2>Would you like to sign up for our site?</h2>
+
+<br>
+
+
+<main class="container">
+    <h1>National Parks FAQ</h1>
+
+    <h4><a id="toggle" href="">Show/Hide Answers</a></h4>
+    <dl>
+        <dt>
+            Why did the NPS move facilities out of Giant Forest?
+        </dt>
+        <dd class="invisible">
+            Impacts from nearly 100 years of development supporting overnight accommodations in Giant Forest threatened the giant sequoia ecosystem that the National Park Service was charged to protect for future generations. To construct roads and parking lots, sequoia roots were pruned, small portions of wetland and riparian areas were filled over, and drainage patterns were changed. Crumbling sewer pipes leaked effluent into meadows and streams. Trampling and automobile use compacted, eroded, and degraded soils, and pavement remained in abandoned campgrounds - all preventing germination and establishment of grasses, wildflowers, shrubs, and tree seedlings. Fire, a critical factor for establishing the next generation of sequoias, was eliminated from the developed zone. Visitor enjoyment was altered by traffic congestion and limited opportunities for people with disabilities. Aging, dilapidated structures were costly to maintain and service.
+        </dd>
+        <dt>
+            How much development did there used to be in Giant Forest?
+        </dt>
+        <dd class="invisible">
+            In 1996, Giant Forest contained nearly 300 buildings, including cabins and motel units for visitor lodging, employee housing, a cafeteria, gift shops, and a market. There was an extensive infrastructure to support these buildings, with over 25 acres of asphalt roads, walkways, and parking lots; miles of aerial electric and telephone lines; a sewage treatment plant; and underground water and sewer lines, propane tanks, and manholes. Prior to 1970, Giant Forest also contained 4 campgrounds, a museum, and a gas station.
+        </dd>
+    </dl>
+    <h3 id="national-parks-heading">Sequoia Facts</h3>
+    <ul id="national-parks">
+        <li>. Every year, more than 1.6 million people visit the park, making Sequoia National Park lodging somewhat of a challenge, especially during the summer months. The acreage measures 404,063 and is designated as wilderness, but is still a place where campers flock annually.</li>
+        <li>The natives never wanted to come out of here because of the big ass bears and malaria in the valley LOL
+            .</li>
+        <li>One of the more popular Sequoia National Park tours includes a journey called Trail of 100 Giants. This is a hiking tour that brings you the place where the oldest and biggest trees live. Many are between 500 and 1500 years in age.
+
+        </li>
+    </ul>
+    <h3 id="national-parks-heading">Redwood Facts</h3>
+    <ul id="national-parks">
+        <li>Redwood National Park covers a total area of 131,983 acres.</li>
+        <li>While the giant sequoia trees in the California Sierras are the largest trees by volume, coast redwoods are the tallest trees, with the tallest reaching nearly 380 feet.</li>
+        <li>I once thought I'd get lost in the forest when driving up to Humbolt/Eureka because I wasn't smart and
+            drove close to night time.
+    </ul>
+    <h3 id="national-parks-heading">Yosemite Facts</h3>
+    <ul id="national-parks">
+        <li>It's pronounced Yo-SEE-MEE-TEE, sweaty.</li>
+        <li>It also means killer in Miwok. (Oh snap watch out.)</li>
+        <li>It's the closest you'll ever want to be next or or around Fresno.</li>
+    </ul>
+    <button id="push" data-toggle="button" aria-pressed="true">Push me to highlight the facts.</button>
+
+
+
+</main>
+
+    <script src="js/jquery-2.2.4.js"></script>
+    <script>
+        "use strict";
+        $('#toggle').click(function (e) {
+            e.preventDefault();
+            $("dd").toggleClass("invisible");
+        });
+//        Create a button that, when clicked, makes the last li in each ul have a yellow background.
+
+//        $("#push").click(function () {
+//        $('li').each( function() {
+//            $(this).last().css('background-color', '#FF0');
+//        });
+        var push = $('#push');
+        push.click(function () {
+            $("ul").each(function (index, element) {
+                $(element).children().last().css('background-color', '#FF0');
+            });
+
+        });
+        $("h3").click(function() {
+            $(this).next().css('font-weight', 'bold');
+        });
+
+        $('li').click(function () {
+            $(this).parent().children().first().css("color", "blue");
+        });
+        $('h1').css("text-align", "center");
+
+        $('span').click(function (e) {
+            e.preventDefault();
+            $("div").toggle().hide();
+        });
+//        The uls next to each h3 that contain facts about each park should start out hidden,
+        $('ul').hide();
+        $('h3').click(function () {
+            $(this).next().slideToggle();
+
+        });
+//
+//        $('#myModal').on('hidden.bs.modal', function (e) {
+//        });
+            $('h2').hide().fadeIn(5000);
+//        $('#myModal').on('hidden.bs.modal', function () {
+//            $('h2').trigger('focus');
+//        });
+//        After the user has been on the page for 8 seconds,
+//        an h2 should fade in that asks the user to register for the site.
+
+
+
+
+
+    </script>
 </body>
 </html>
