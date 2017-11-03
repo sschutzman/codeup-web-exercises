@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+</head>
+<body>
+<main id="container">
+    <div class="map">
+
+    </div>
+
+</main>
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+
+    $.get("http://api.openweathermap.org/data/2.5/weather", {
+        APPID: "7f8e3aa0aad113510e0c1eaafd1c17b8",
+        q: "San Antonio, TX"
+    }).done(function (data) {
+        console.log(data);
+    });
+
+</script>
+</body>
+</html>
