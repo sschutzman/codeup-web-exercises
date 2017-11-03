@@ -17,7 +17,8 @@
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h1>Would you like to sign up for our news letter?<span><a href=""> x</a></span></h1>
     </div>
-<h2>Would you like to sign up for our site?</h2>
+
+<h2 id="register">Would you like to sign up for our site?</h2>
 
 <br>
 
@@ -95,12 +96,14 @@
         $('li').click(function () {
             $(this).parent().children().first().css("color", "blue");
         });
-        $('h1').css("text-align", "center");
 
-        $('span').click(function (e) {
-            e.preventDefault();
-            $("div").toggle().hide();
+        $('h1').css("text-align", "center");
+//
+        $('span').click(function () {
+            $(this).parent().hide();
+
         });
+
 //        The uls next to each h3 that contain facts about each park should start out hidden,
         $('ul').hide();
         $('h3').click(function () {
@@ -110,7 +113,7 @@
 //
 //        $('#myModal').on('hidden.bs.modal', function (e) {
 //        });
-            $('h2').hide().fadeIn(5000);
+            $('#register').hide().delay(2000).fadeIn();
 //        $('#myModal').on('hidden.bs.modal', function () {
 //            $('h2').trigger('focus');
 //        });
