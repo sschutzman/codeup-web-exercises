@@ -5,3 +5,5 @@ const sayHello = (name = "World") => {
 };
 console.log(sayHello());
 
+const niceMessage = require('./say-hello');
+console.log(niceMessage());
